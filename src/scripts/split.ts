@@ -40,21 +40,22 @@ const features: Array<Object> = _.flow(
     _.filter(_.flow(
         _.get('properties.REF'),
         ref => parseInt(ref.slice(0, 3)),
-        codeDept => {
-            console.log(codeDept);
-            return codeDept <= 976 && codeDept !== 975;
-        },
+        codeDept => codeDept <= 976 && codeDept !== 975,
     ))
 )(originalGeojson);
 
-
+// let's simplify throught topojson
 const originalTopology = topojson.topology(features, 1e6);
 const presimplifiedTopology = topojson.presimplify(originalTopology);
 const simplifiedTopology = topojson.simplify(presimplifiedTopology, .0001);
 
-// filter Metropole and DOM
-writeFileSync('test.json', JSON.stringify(simplifiedTopology));
-
 // mapping with communes and departements
 const mapping: Array<Object> = readCSV('data/Table_de_correspondance_circo_legislatives2017-1.csv');
-console.log(mapping[0]);
+const mappingDOM: Object = {
+    'ZA': '971',
+    'ZB': '972',
+    'ZC': '973',
+    'ZD': '974',
+    'ZM': '976',
+};
+
