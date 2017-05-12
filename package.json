@@ -1,0 +1,28 @@
+{
+  "name": "how-to-generate-svg-server-side",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/seracio/how-to-generate-svg-server-side.git",
+  "author": "nmondon <nicolasmondon@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "d3": "^4.8.0",
+    "filendir": "^1.0.0",
+    "lodash": "^4.17.4",
+    "prop-types": "^15.5.9",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "svgo": "^0.7.2",
+    "topojson": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.18",
+    "@types/react": "^15.0.24",
+    "@types/react-dom": "^15.5.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.2"
+  },
+  "scripts": {
+    "split": "./node_modules/.bin/ts-node src/scripts/split.ts"
+  }
+}
