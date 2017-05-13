@@ -128,7 +128,11 @@ const propertiesByRef: Object = _.flow(
         // code circo are 4 chars long
         // code communes are 2 char for the dept and 3 for the commune
         if (_.has(codeDept, mappingCorsica)) {
-            return `${codeDept}-${format2(codeCirconscription)}`;
+            return {
+                id: `${codeDept}${format2(codeCirconscription)}`,
+                communes: codesCommune.map(codeCommune => `${codeDept}${format3(codeCommune)}`),
+                departement: codeDept,
+            };
         }
         // Metropole
         // code circo are 4 chars long
