@@ -8,6 +8,7 @@
   "dependencies": {
     "d3": "^4.8.0",
     "filendir": "^1.0.0",
+    "glob": "^7.1.1",
     "lodash": "^4.17.4",
     "prop-types": "^15.5.9",
     "react": "^15.5.4",
@@ -16,6 +17,7 @@
     "topojson": "^3.0.0"
   },
   "devDependencies": {
+    "@types/d3": "^4.8.0",
     "@types/node": "^7.0.18",
     "@types/react": "^15.0.24",
     "@types/react-dom": "^15.5.0",
@@ -23,6 +25,7 @@
     "typescript": "^2.3.2"
   },
   "scripts": {
-    "split": "./node_modules/.bin/ts-node src/scripts/split.ts"
+    "split": "./node_modules/.bin/ts-node src/scripts/split.ts",
+    "start": "./node_modules/.bin/ts-node src/index.tsx"
   }
 }
