@@ -8,7 +8,7 @@ interface Props {
 
 export const Feature = ({ feature, pathGen }: Props) => {
     return (
-        <a xlinkHref={'http://lefigaro.fr'}>
+        <a xlinkHref={'/'}>
             <path
                 className="eln-map__children"
                 strokeLinejoin="round"
