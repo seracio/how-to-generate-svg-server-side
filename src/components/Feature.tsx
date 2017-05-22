@@ -8,13 +8,11 @@ interface Props {
 
 export const Feature = ({ feature, pathGen }: Props) => {
     return (
-        <a xlinkHref={'/'}>
-            <path
-                className="eln-map__children"
-                strokeLinejoin="round"
-                style={{ fill: 'blue', stroke: 'red', strokeWidth: .5 }}
-                d={pathGen(feature)} />
-        </a>
+        <path
+            className="eln-map__children"
+            strokeLinejoin="round"
+            style={{ fill: 'blue', stroke: 'red', strokeWidth: .5 }}
+            d={pathGen(feature)} />
 
     );
 };

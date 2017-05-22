@@ -58,7 +58,7 @@ const features: Array<Object> = _.flow(
 // let's simplify throught topojson
 const originalTopology = topojson.topology(features, 1e6);
 const presimplifiedTopology = topojson.presimplify(originalTopology);
-const simplifiedTopology = topojson.simplify(presimplifiedTopology, 1e-5);
+const simplifiedTopology = topojson.simplify(presimplifiedTopology, 1e-4);
 
 /////////////////////////////////////
 // WELCOME TO THE HELL OF MAPPING /o\

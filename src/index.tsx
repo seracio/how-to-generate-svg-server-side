@@ -12,9 +12,9 @@ import { Feature } from './components/Feature';
 
 // optimize paths
 const svgo = new SVGOptim({
+    full: true,
     plugins: [{
         convertPathData: true,
-        transformsWithOnePath: true
     }]
 });
 

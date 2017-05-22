@@ -1,5 +1,19 @@
 # How to generate a svg map server side 
 
+## Scripts
+
+* Split and simplify the original `geojson` file
+
+```
+yarn split
+```
+
+* Build a map thanks to `react`
+
+```
+yarn start
+```
+
 ## Resources
 
 * [Original geojson](https://www.data.gouv.fr/fr/datasets/contours-precis-des-circonscriptions-legislatives/)
